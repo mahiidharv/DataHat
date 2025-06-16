@@ -4,4 +4,4 @@ _pycache__/
 .ipynb
 env 
 venv
-
+*.pyc
