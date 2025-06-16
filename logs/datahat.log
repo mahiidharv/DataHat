@@ -1,0 +1,368 @@
+2025-06-13:19:31:51,795 INFO     [D:\DataHat\datahat\main.py:123]     ETL Started at time:2025-06-13 19:31:51.795210
+2025-06-13:19:31:51,795 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://assets.upstox.com/market-quote/instruments/exchange/NSE.csv.gz
+2025-06-13:19:31:52,181 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://images.dhan.co/api-data/api-scrip-master.csv
+2025-06-13:19:31:55,131 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE_EQ and instrument type: EQUITY
+2025-06-13:19:31:55,137 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE and instrument type: EQUITY
+2025-06-13:19:31:55,173 INFO     [D:\DataHat\datahat\main.py:47]     Size of Upstox:8078
+2025-06-13:19:31:55,173 INFO     [D:\DataHat\datahat\main.py:48]     Size of Dhan:8078
+2025-06-13:19:31:55,173 INFO     [D:\DataHat\datahat\main.py:69]     sqllite_connection_url:D:\DataHat\datahat\data\market_data.db
+2025-06-13:19:31:55,189 INFO     [D:\DataHat\datahat\mongo_operations.py:17]     Upserting DataFrame into MongoDB collection 'upstox_nse' in database 'market_data' using key 'instrument_key'
+2025-06-13:19:31:55,213 INFO     [D:\DataHat\datahat\mongo_operations.py:39]     Collection 'upstox_nse' already exists. Proceeding with upsert operation.
+2025-06-13:19:31:55,247 INFO     [D:\DataHat\datahat\mongo_operations.py:47]     DataFrame contains 8078 rows and 12 columns.
+2025-06-13:19:31:55,250 INFO     [D:\DataHat\datahat\mongo_operations.py:57]     Attempting to store/upsert 8078  data entries...
+2025-06-13:19:32:08,881 INFO     [D:\DataHat\datahat\mongo_operations.py:70]     Upserted 8078 new documents and modified 0 existing documents.
+2025-06-13:19:32:08,884 INFO     [D:\DataHat\datahat\mongo_operations.py:75]     Upsert operation completed successfully for collection 'upstox_nse' in database 'market_data'.
+2025-06-13:19:32:08,889 INFO     [D:\DataHat\datahat\main.py:79]     MongoDB upsert completed !!! :)
+2025-06-13:19:32:08,889 INFO     [D:\DataHat\datahat\sqlite_operations.py:35]     Upserting DataFrame into SQLite table 'dhan_nse' in database 'market_data.db' using key 'SEM_SMST_SECURITY_ID'
+2025-06-13:19:32:08,890 INFO     [D:\DataHat\datahat\sqlite_operations.py:57]     Table 'dhan_nse' does not exist. Creating new table.
+2025-06-13:19:32:08,891 INFO     [D:\DataHat\datahat\sqlite_operations.py:65]     Creating table 'dhan_nse'
+2025-06-13:19:32:08,990 INFO     [D:\DataHat\datahat\sqlite_operations.py:74]     Attempting to store/upsert 8078 data entries...
+2025-06-13:19:32:09,448 INFO     [D:\DataHat\datahat\sqlite_operations.py:91]     SQLite batch upsert successful: 8078 rows affected.
+2025-06-13:19:32:09,449 INFO     [D:\DataHat\datahat\main.py:89]     Sqlite upsert completed !!! :)
+2025-06-13:19:32:09,450 INFO     [D:\DataHat\datahat\transformations.py:32]     Merging DataFrames on column: tradingsymbol
+2025-06-13:19:32:09,450 INFO     [D:\DataHat\datahat\transformations.py:37]     Removing the duplicates in tradingsymbol
+2025-06-13:19:32:09,450 INFO     [D:\DataHat\datahat\transformations.py:39]     Removing the duplicates 11 in tradingsymbol first dataframe
+2025-06-13:19:32:09,450 INFO     [D:\DataHat\datahat\transformations.py:41]     Removing the duplicates11 in tradingsymbol second dataframe
+2025-06-13:19:32:09,503 INFO     [D:\DataHat\datahat\main.py:111]     Common Stocks: 8067
+2025-06-13:19:32:09,503 INFO     [D:\DataHat\datahat\main.py:112]     Upstox Stocks Only: 0
+2025-06-13:19:32:09,503 INFO     [D:\DataHat\datahat\main.py:113]     Dhan Stocks: 0
+2025-06-13:19:32:09,519 INFO     [D:\DataHat\datahat\main.py:125]     ETL completed successfully.
+2025-06-13:19:32:09,519 INFO     [D:\DataHat\datahat\main.py:127]     ETL Ended at time:2025-06-13 19:32:09.519867
+2025-06-13:19:32:09,520 INFO     [D:\DataHat\datahat\main.py:128]     Time taken to finish the process of ETL:0:00:17.724657
+2025-06-13:19:53:26,155 INFO     [D:\DataHat\datahat\main.py:134]     ETL Started at time:2025-06-13 19:53:26.155552
+2025-06-13:19:53:26,171 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://assets.upstox.com/market-quote/instruments/exchange/NSE.csv.gz
+2025-06-13:19:53:26,671 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://images.dhan.co/api-data/api-scrip-master.csv
+2025-06-13:19:53:30,625 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE_EQ and instrument type: EQUITY
+2025-06-13:19:53:30,655 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE and instrument type: EQUITY
+2025-06-13:19:53:30,655 ERROR    [D:\DataHat\datahat\transformations.py:6]     Columns SEM_EXM_EXCH_ID or SEM_INSTRUMENT_NAM not found in DataFrame
+2025-06-13:19:53:30,655 ERROR    [D:\DataHat\datahat\main.py:141]     An error occurred: Columns SEM_EXM_EXCH_ID or SEM_INSTRUMENT_NAM not found in DataFrame
+Traceback (most recent call last):
+  File "D:\DataHat\datahat\main.py", line 135, in <module>
+    result = main(config=config,logger=logger)
+  File "D:\DataHat\datahat\main.py", line 51, in main
+    dhan = filter_normalize(df = dhan_scrip,
+  File "D:\DataHat\datahat\transformations.py", line 7, in filter_normalize
+    raise ValueError(f"Columns {exchange_col} or {instrument_type_col} not found in DataFrame")
+ValueError: Columns SEM_EXM_EXCH_ID or SEM_INSTRUMENT_NAM not found in DataFrame
+2025-06-13:19:54:32,151 INFO     [D:\DataHat\datahat\main.py:134]     ETL Started at time:2025-06-13 19:54:32.151209
+2025-06-13:19:54:32,151 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://assets.upstox.com/market-quote/instruments/exchange/NSE.csv.gz
+2025-06-13:19:54:32,594 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://images.dhan.co/api-data/api-scrip-master.csv
+2025-06-13:19:54:35,713 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE_EQ and instrument type: EQUITY
+2025-06-13:19:54:35,728 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE and instrument type: EQUITY
+2025-06-13:19:54:35,762 INFO     [D:\DataHat\datahat\main.py:58]     Size of Upstox:8078
+2025-06-13:19:54:35,762 INFO     [D:\DataHat\datahat\main.py:59]     Size of Dhan:8078
+2025-06-13:19:54:35,764 INFO     [D:\DataHat\datahat\main.py:80]     sqllite_connection_url:D:\DataHat\datahat\data\market_data.db
+2025-06-13:19:54:35,772 INFO     [D:\DataHat\datahat\mongo_operations.py:17]     Upserting DataFrame into MongoDB collection 'upstox_nse' in database 'market_data' using key 'instrument_key'
+2025-06-13:19:54:35,783 INFO     [D:\DataHat\datahat\mongo_operations.py:39]     Collection 'upstox_nse' already exists. Proceeding with upsert operation.
+2025-06-13:19:54:35,850 INFO     [D:\DataHat\datahat\mongo_operations.py:47]     DataFrame contains 8078 rows and 12 columns.
+2025-06-13:19:54:35,851 INFO     [D:\DataHat\datahat\mongo_operations.py:57]     Attempting to store/upsert 8078  data entries...
+2025-06-13:19:54:48,746 INFO     [D:\DataHat\datahat\mongo_operations.py:70]     Upserted 8078 new documents and modified 0 existing documents.
+2025-06-13:19:54:48,748 INFO     [D:\DataHat\datahat\mongo_operations.py:75]     Upsert operation completed successfully for collection 'upstox_nse' in database 'market_data'.
+2025-06-13:19:54:48,754 INFO     [D:\DataHat\datahat\main.py:90]     MongoDB upsert completed !!! :)
+2025-06-13:19:54:48,755 INFO     [D:\DataHat\datahat\sqlite_operations.py:35]     Upserting DataFrame into SQLite table 'dhan_nse' in database 'market_data.db' using key 'SEM_SMST_SECURITY_ID'
+2025-06-13:19:54:48,756 INFO     [D:\DataHat\datahat\sqlite_operations.py:57]     Table 'dhan_nse' does not exist. Creating new table.
+2025-06-13:19:54:48,757 INFO     [D:\DataHat\datahat\sqlite_operations.py:65]     Creating table 'dhan_nse'
+2025-06-13:19:54:48,851 INFO     [D:\DataHat\datahat\sqlite_operations.py:74]     Attempting to store/upsert 8078 data entries...
+2025-06-13:19:54:49,269 INFO     [D:\DataHat\datahat\sqlite_operations.py:91]     SQLite batch upsert successful: 8078 rows affected.
+2025-06-13:19:54:49,270 INFO     [D:\DataHat\datahat\main.py:100]     Sqlite upsert completed !!! :)
+2025-06-13:19:54:49,270 INFO     [D:\DataHat\datahat\transformations.py:32]     Merging DataFrames on column: tradingsymbol
+2025-06-13:19:54:49,271 INFO     [D:\DataHat\datahat\transformations.py:37]     Removing the duplicates in tradingsymbol
+2025-06-13:19:54:49,274 INFO     [D:\DataHat\datahat\transformations.py:39]     Removing the duplicates 11 in tradingsymbol first dataframe
+2025-06-13:19:54:49,275 INFO     [D:\DataHat\datahat\transformations.py:41]     Removing the duplicates11 in tradingsymbol second dataframe
+2025-06-13:19:54:49,318 INFO     [D:\DataHat\datahat\main.py:122]     Common Stocks: 8067
+2025-06-13:19:54:49,318 INFO     [D:\DataHat\datahat\main.py:123]     Upstox Stocks Only: 0
+2025-06-13:19:54:49,318 INFO     [D:\DataHat\datahat\main.py:124]     Dhan Stocks: 0
+2025-06-13:19:54:49,339 INFO     [D:\DataHat\datahat\main.py:136]     ETL completed successfully.
+2025-06-13:19:54:49,339 INFO     [D:\DataHat\datahat\main.py:138]     ETL Ended at time:2025-06-13 19:54:49.339569
+2025-06-13:19:54:49,339 INFO     [D:\DataHat\datahat\main.py:139]     Time taken to finish the process of ETL:0:00:17.188360
+2025-06-14:12:59:17,233 INFO     [D:\DataHat\datahat\main.py:136]     ETL Started at time:2025-06-14 12:59:17.233527
+2025-06-14:12:59:17,242 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://assets.upstox.com/market-quote/instruments/exchange/NSE.csv.gz
+2025-06-14:12:59:17,602 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://images.dhan.co/api-data/api-scrip-master.csv
+2025-06-14:12:59:20,149 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE_EQ and instrument type: EQUITY
+2025-06-14:12:59:20,242 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE and instrument type: EQUITY
+2025-06-14:12:59:20,261 INFO     [D:\DataHat\datahat\main.py:58]     Size of Upstox:8110
+2025-06-14:12:59:20,261 INFO     [D:\DataHat\datahat\main.py:59]     Size of Dhan:8110
+2025-06-14:12:59:20,261 ERROR    [D:\DataHat\datahat\main.py:143]     An error occurred: [WinError 183] Cannot create a file when that file already exists: 'D:\\DataHat\\datahat\\data\\market_data.db'
+Traceback (most recent call last):
+  File "D:\DataHat\datahat\main.py", line 137, in <module>
+    result = main(config=config,logger=logger)
+  File "D:\DataHat\datahat\main.py", line 79, in main
+    os.makedirs(sqlite_connection_url)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.3568.0_x64__qbz5n2kfra8p0\lib\os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'D:\\DataHat\\datahat\\data\\market_data.db'
+2025-06-14:13:00:26,3 INFO     [D:\DataHat\datahat\main.py:136]     ETL Started at time:2025-06-14 13:00:26.003472
+2025-06-14:13:00:26,3 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://assets.upstox.com/market-quote/instruments/exchange/NSE.csv.gz
+2025-06-14:13:00:26,370 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://images.dhan.co/api-data/api-scrip-master.csv
+2025-06-14:13:00:28,670 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE_EQ and instrument type: EQUITY
+2025-06-14:13:00:28,693 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE and instrument type: EQUITY
+2025-06-14:13:00:28,713 INFO     [D:\DataHat\datahat\main.py:58]     Size of Upstox:8110
+2025-06-14:13:00:28,713 INFO     [D:\DataHat\datahat\main.py:59]     Size of Dhan:8110
+2025-06-14:13:00:28,713 INFO     [D:\DataHat\datahat\main.py:82]     sqllite_connection_url:D:\DataHat\datahat\data\market_data.db
+2025-06-14:13:00:28,725 INFO     [D:\DataHat\datahat\mongo_operations.py:17]     Upserting DataFrame into MongoDB collection 'upstox_nse' in database 'market_data' using key 'instrument_key'
+2025-06-14:13:00:28,824 INFO     [D:\DataHat\datahat\mongo_operations.py:39]     Collection 'upstox_nse' already exists. Proceeding with upsert operation.
+2025-06-14:13:00:28,873 INFO     [D:\DataHat\datahat\mongo_operations.py:47]     DataFrame contains 8110 rows and 12 columns.
+2025-06-14:13:00:28,873 INFO     [D:\DataHat\datahat\mongo_operations.py:57]     Attempting to store/upsert 8110  data entries...
+2025-06-14:13:00:43,819 INFO     [D:\DataHat\datahat\mongo_operations.py:70]     Upserted 8110 new documents and modified 0 existing documents.
+2025-06-14:13:00:43,821 INFO     [D:\DataHat\datahat\mongo_operations.py:75]     Upsert operation completed successfully for collection 'upstox_nse' in database 'market_data'.
+2025-06-14:13:00:43,825 INFO     [D:\DataHat\datahat\main.py:92]     MongoDB upsert completed !!! :)
+2025-06-14:13:00:43,827 INFO     [D:\DataHat\datahat\sqlite_operations.py:35]     Upserting DataFrame into SQLite table 'dhan_nse' in database 'market_data.db' using key 'SEM_SMST_SECURITY_ID'
+2025-06-14:13:00:43,828 INFO     [D:\DataHat\datahat\sqlite_operations.py:57]     Table 'dhan_nse' does not exist. Creating new table.
+2025-06-14:13:00:43,828 INFO     [D:\DataHat\datahat\sqlite_operations.py:65]     Creating table 'dhan_nse'
+2025-06-14:13:00:43,996 INFO     [D:\DataHat\datahat\sqlite_operations.py:74]     Attempting to store/upsert 8110 data entries...
+2025-06-14:13:00:44,444 INFO     [D:\DataHat\datahat\sqlite_operations.py:91]     SQLite batch upsert successful: 8110 rows affected.
+2025-06-14:13:00:44,445 INFO     [D:\DataHat\datahat\main.py:102]     Sqlite upsert completed !!! :)
+2025-06-14:13:00:44,445 INFO     [D:\DataHat\datahat\transformations.py:32]     Merging DataFrames on column: tradingsymbol
+2025-06-14:13:00:44,446 INFO     [D:\DataHat\datahat\transformations.py:37]     Removing the duplicates in tradingsymbol
+2025-06-14:13:00:44,447 INFO     [D:\DataHat\datahat\transformations.py:39]     Removing the duplicates 11 in tradingsymbol first dataframe
+2025-06-14:13:00:44,447 INFO     [D:\DataHat\datahat\transformations.py:41]     Removing the duplicates11 in tradingsymbol second dataframe
+2025-06-14:13:00:44,531 INFO     [D:\DataHat\datahat\main.py:124]     Common Stocks: 8099
+2025-06-14:13:00:44,532 INFO     [D:\DataHat\datahat\main.py:125]     Upstox Stocks Only: 0
+2025-06-14:13:00:44,532 INFO     [D:\DataHat\datahat\main.py:126]     Dhan Stocks: 0
+2025-06-14:13:00:44,546 INFO     [D:\DataHat\datahat\main.py:138]     ETL completed successfully.
+2025-06-14:13:00:44,546 INFO     [D:\DataHat\datahat\main.py:140]     ETL Ended at time:2025-06-14 13:00:44.546353
+2025-06-14:13:00:44,546 INFO     [D:\DataHat\datahat\main.py:141]     Time taken to finish the process of ETL:0:00:18.542881
+2025-06-16:07:27:06,594 INFO     [D:\DataHat\datahat\main.py:136]     ETL Started at time:2025-06-16 07:27:06.594552
+2025-06-16:07:27:06,599 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://assets.upstox.com/market-quote/instruments/exchange/NSE.csv.gz
+2025-06-16:07:27:07,10 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://images.dhan.co/api-data/api-scrip-master.csv
+2025-06-16:07:27:11,121 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE_EQ and instrument type: EQUITY
+2025-06-16:07:27:11,180 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE and instrument type: EQUITY
+2025-06-16:07:27:11,263 INFO     [D:\DataHat\datahat\main.py:58]     Size of Upstox:8110
+2025-06-16:07:27:11,263 INFO     [D:\DataHat\datahat\main.py:59]     Size of Dhan:8110
+2025-06-16:07:27:11,263 INFO     [D:\DataHat\datahat\main.py:82]     sqllite_connection_url:D:\DataHat\datahat\data\market_data.db
+2025-06-16:07:27:11,398 INFO     [D:\DataHat\datahat\mongo_operations.py:17]     Upserting DataFrame into MongoDB collection 'upstox_nse' in database 'market_data' using key 'instrument_key'
+2025-06-16:07:27:41,418 ERROR    [D:\DataHat\datahat\main.py:143]     An error occurred: localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684f79f7187ba9f9755afec5, topology_type: Unknown, servers: [<ServerDescription ('localhost', 32769) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+Traceback (most recent call last):
+  File "D:\DataHat\datahat\main.py", line 137, in <module>
+    result = main(config=config,logger=logger)
+  File "D:\DataHat\datahat\main.py", line 86, in main
+    upsert_mongodb_using_key(df=upstox,
+  File "D:\DataHat\datahat\mongo_operations.py", line 35, in upsert_mongodb_using_key
+    if collection_name not in db.list_collection_names():
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\database.py", line 1226, in list_collection_names
+    return self._list_collection_names(session, filter, comment, **kwargs)
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\database.py", line 1191, in _list_collection_names
+    result["name"] for result in self._list_collections_helper(session=session, **kwargs)
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\database.py", line 1138, in _list_collections_helper
+    return self._client._retryable_read(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+  File "D:\DataHat\env\lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1982, in _retry_internal
+    return _ClientConnectionRetryable(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684f79f7187ba9f9755afec5, topology_type: Unknown, servers: [<ServerDescription ('localhost', 32769) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-16:07:28:28,541 INFO     [D:\DataHat\datahat\main.py:136]     ETL Started at time:2025-06-16 07:28:28.541972
+2025-06-16:07:28:28,541 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://assets.upstox.com/market-quote/instruments/exchange/NSE.csv.gz
+2025-06-16:07:28:28,809 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://images.dhan.co/api-data/api-scrip-master.csv
+2025-06-16:07:28:31,506 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE_EQ and instrument type: EQUITY
+2025-06-16:07:28:31,522 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE and instrument type: EQUITY
+2025-06-16:07:28:31,553 INFO     [D:\DataHat\datahat\main.py:58]     Size of Upstox:8110
+2025-06-16:07:28:31,553 INFO     [D:\DataHat\datahat\main.py:59]     Size of Dhan:8110
+2025-06-16:07:28:31,553 INFO     [D:\DataHat\datahat\main.py:82]     sqllite_connection_url:D:\DataHat\datahat\data\market_data.db
+2025-06-16:07:28:31,553 INFO     [D:\DataHat\datahat\mongo_operations.py:17]     Upserting DataFrame into MongoDB collection 'upstox_nse' in database 'market_data' using key 'instrument_key'
+2025-06-16:07:29:01,599 ERROR    [D:\DataHat\datahat\main.py:143]     An error occurred: localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684f7a472242b847aa95aa8b, topology_type: Unknown, servers: [<ServerDescription ('localhost', 32769) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+Traceback (most recent call last):
+  File "D:\DataHat\datahat\main.py", line 137, in <module>
+    result = main(config=config,logger=logger)
+  File "D:\DataHat\datahat\main.py", line 86, in main
+    upsert_mongodb_using_key(df=upstox,
+  File "D:\DataHat\datahat\mongo_operations.py", line 35, in upsert_mongodb_using_key
+    if collection_name not in db.list_collection_names():
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\database.py", line 1226, in list_collection_names
+    return self._list_collection_names(session, filter, comment, **kwargs)
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\database.py", line 1191, in _list_collection_names
+    result["name"] for result in self._list_collections_helper(session=session, **kwargs)
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\database.py", line 1138, in _list_collections_helper
+    return self._client._retryable_read(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+  File "D:\DataHat\env\lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1982, in _retry_internal
+    return _ClientConnectionRetryable(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684f7a472242b847aa95aa8b, topology_type: Unknown, servers: [<ServerDescription ('localhost', 32769) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-16:07:29:54,527 INFO     [D:\DataHat\datahat\main.py:136]     ETL Started at time:2025-06-16 07:29:54.527109
+2025-06-16:07:29:54,527 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://assets.upstox.com/market-quote/instruments/exchange/NSE.csv.gz
+2025-06-16:07:29:54,874 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://images.dhan.co/api-data/api-scrip-master.csv
+2025-06-16:07:29:57,243 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE_EQ and instrument type: EQUITY
+2025-06-16:07:29:57,243 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE and instrument type: EQUITY
+2025-06-16:07:29:57,279 INFO     [D:\DataHat\datahat\main.py:58]     Size of Upstox:8110
+2025-06-16:07:29:57,279 INFO     [D:\DataHat\datahat\main.py:59]     Size of Dhan:8110
+2025-06-16:07:29:57,279 INFO     [D:\DataHat\datahat\main.py:82]     sqllite_connection_url:D:\DataHat\datahat\data\market_data.db
+2025-06-16:07:29:57,279 INFO     [D:\DataHat\datahat\mongo_operations.py:17]     Upserting DataFrame into MongoDB collection 'upstox_nse' in database 'market_data' using key 'instrument_key'
+2025-06-16:07:30:27,739 ERROR    [D:\DataHat\datahat\main.py:143]     An error occurred: localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684f7a9d944f5c5f591ac885, topology_type: Unknown, servers: [<ServerDescription ('localhost', 32769) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+Traceback (most recent call last):
+  File "D:\DataHat\datahat\main.py", line 137, in <module>
+    result = main(config=config,logger=logger)
+  File "D:\DataHat\datahat\main.py", line 86, in main
+    upsert_mongodb_using_key(df=upstox,
+  File "D:\DataHat\datahat\mongo_operations.py", line 35, in upsert_mongodb_using_key
+    if collection_name not in db.list_collection_names():
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\database.py", line 1226, in list_collection_names
+    return self._list_collection_names(session, filter, comment, **kwargs)
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\database.py", line 1191, in _list_collection_names
+    result["name"] for result in self._list_collections_helper(session=session, **kwargs)
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\database.py", line 1138, in _list_collections_helper
+    return self._client._retryable_read(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+  File "D:\DataHat\env\lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1982, in _retry_internal
+    return _ClientConnectionRetryable(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684f7a9d944f5c5f591ac885, topology_type: Unknown, servers: [<ServerDescription ('localhost', 32769) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-16:07:46:54,345 INFO     [D:\DataHat\datahat\main.py:136]     ETL Started at time:2025-06-16 07:46:54.345907
+2025-06-16:07:46:54,345 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://assets.upstox.com/market-quote/instruments/exchange/NSE.csv.gz
+2025-06-16:07:46:54,616 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://images.dhan.co/api-data/api-scrip-master.csv
+2025-06-16:07:46:56,828 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE_EQ and instrument type: EQUITY
+2025-06-16:07:46:56,844 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE and instrument type: EQUITY
+2025-06-16:07:46:56,872 INFO     [D:\DataHat\datahat\main.py:58]     Size of Upstox:8110
+2025-06-16:07:46:56,872 INFO     [D:\DataHat\datahat\main.py:59]     Size of Dhan:8110
+2025-06-16:07:46:56,882 INFO     [D:\DataHat\datahat\main.py:82]     sqllite_connection_url:D:\DataHat\datahat\data\market_data.db
+2025-06-16:07:46:56,886 INFO     [D:\DataHat\datahat\mongo_operations.py:17]     Upserting DataFrame into MongoDB collection 'upstox_nse' in database 'market_data' using key 'instrument_key'
+2025-06-16:07:47:27,394 ERROR    [D:\DataHat\datahat\main.py:143]     An error occurred: localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684f7e98bd97c8338cae9cd7, topology_type: Unknown, servers: [<ServerDescription ('localhost', 32769) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+Traceback (most recent call last):
+  File "D:\DataHat\datahat\main.py", line 137, in <module>
+    result = main(config=config,logger=logger)
+  File "D:\DataHat\datahat\main.py", line 86, in main
+    upsert_mongodb_using_key(df=upstox,
+  File "D:\DataHat\datahat\mongo_operations.py", line 35, in upsert_mongodb_using_key
+    if collection_name not in db.list_collection_names():
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\database.py", line 1226, in list_collection_names
+    return self._list_collection_names(session, filter, comment, **kwargs)
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\database.py", line 1191, in _list_collection_names
+    result["name"] for result in self._list_collections_helper(session=session, **kwargs)
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\database.py", line 1138, in _list_collections_helper
+    return self._client._retryable_read(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2026, in _retryable_read
+    return self._retry_internal(
+  File "D:\DataHat\env\lib\site-packages\pymongo\_csot.py", line 125, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1982, in _retry_internal
+    return _ClientConnectionRetryable(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2730, in run
+    return self._read() if self._is_read else self._write()
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2875, in _read
+    self._server = self._get_server()
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 2823, in _get_server
+    return self._client._select_server(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\mongo_client.py", line 1812, in _select_server
+    server = topology.select_server(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 409, in select_server
+    server = self._select_server(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 387, in _select_server
+    servers = self.select_servers(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 294, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "D:\DataHat\env\lib\site-packages\pymongo\synchronous\topology.py", line 344, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 684f7e98bd97c8338cae9cd7, topology_type: Unknown, servers: [<ServerDescription ('localhost', 32769) server_type: Unknown, rtt: None, error=AutoReconnect('localhost:32769: [WinError 10061] No connection could be made because the target machine actively refused it (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+2025-06-16:07:48:13,569 INFO     [D:\DataHat\datahat\main.py:136]     ETL Started at time:2025-06-16 07:48:13.569158
+2025-06-16:07:48:13,569 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://assets.upstox.com/market-quote/instruments/exchange/NSE.csv.gz
+2025-06-16:07:48:13,866 INFO     [D:\DataHat\datahat\urlDownload.py:6]     Downloading file from https://images.dhan.co/api-data/api-scrip-master.csv
+2025-06-16:07:48:15,849 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE_EQ and instrument type: EQUITY
+2025-06-16:07:48:15,851 INFO     [D:\DataHat\datahat\transformations.py:4]     Filtering DataFrame for exchange: NSE and instrument type: EQUITY
+2025-06-16:07:48:15,895 INFO     [D:\DataHat\datahat\main.py:58]     Size of Upstox:8110
+2025-06-16:07:48:15,896 INFO     [D:\DataHat\datahat\main.py:59]     Size of Dhan:8110
+2025-06-16:07:48:15,896 INFO     [D:\DataHat\datahat\main.py:82]     sqllite_connection_url:D:\DataHat\datahat\data\market_data.db
+2025-06-16:07:48:15,898 INFO     [D:\DataHat\datahat\mongo_operations.py:17]     Upserting DataFrame into MongoDB collection 'upstox_nse' in database 'market_data' using key 'instrument_key'
+2025-06-16:07:48:16,29 INFO     [D:\DataHat\datahat\mongo_operations.py:39]     Collection 'upstox_nse' already exists. Proceeding with upsert operation.
+2025-06-16:07:48:16,75 INFO     [D:\DataHat\datahat\mongo_operations.py:47]     DataFrame contains 8110 rows and 12 columns.
+2025-06-16:07:48:16,76 INFO     [D:\DataHat\datahat\mongo_operations.py:57]     Attempting to store/upsert 8110  data entries...
+2025-06-16:07:48:29,530 INFO     [D:\DataHat\datahat\mongo_operations.py:70]     Upserted 0 new documents and modified 0 existing documents.
+2025-06-16:07:48:29,531 INFO     [D:\DataHat\datahat\mongo_operations.py:75]     Upsert operation completed successfully for collection 'upstox_nse' in database 'market_data'.
+2025-06-16:07:48:29,535 INFO     [D:\DataHat\datahat\main.py:92]     MongoDB upsert completed !!! :)
+2025-06-16:07:48:29,633 INFO     [D:\DataHat\datahat\sqlite_operations.py:35]     Upserting DataFrame into SQLite table 'dhan_nse' in database 'market_data.db' using key 'SEM_SMST_SECURITY_ID'
+2025-06-16:07:48:29,636 INFO     [D:\DataHat\datahat\sqlite_operations.py:68]     Table 'dhan_nse' already exists. Proceeding with upsert operation.
+2025-06-16:07:48:29,636 INFO     [D:\DataHat\datahat\sqlite_operations.py:74]     Attempting to store/upsert 8110 data entries...
+2025-06-16:07:48:31,297 INFO     [D:\DataHat\datahat\sqlite_operations.py:91]     SQLite batch upsert successful: 8110 rows affected.
+2025-06-16:07:48:31,297 INFO     [D:\DataHat\datahat\main.py:102]     Sqlite upsert completed !!! :)
+2025-06-16:07:48:31,297 INFO     [D:\DataHat\datahat\transformations.py:32]     Merging DataFrames on column: tradingsymbol
+2025-06-16:07:48:31,297 INFO     [D:\DataHat\datahat\transformations.py:37]     Removing the duplicates in tradingsymbol
+2025-06-16:07:48:31,332 INFO     [D:\DataHat\datahat\transformations.py:39]     Removing the duplicates 11 in tradingsymbol first dataframe
+2025-06-16:07:48:31,333 INFO     [D:\DataHat\datahat\transformations.py:41]     Removing the duplicates11 in tradingsymbol second dataframe
+2025-06-16:07:48:31,407 INFO     [D:\DataHat\datahat\main.py:124]     Common Stocks: 8099
+2025-06-16:07:48:31,407 INFO     [D:\DataHat\datahat\main.py:125]     Upstox Stocks Only: 0
+2025-06-16:07:48:31,407 INFO     [D:\DataHat\datahat\main.py:126]     Dhan Stocks: 0
+2025-06-16:07:48:31,434 INFO     [D:\DataHat\datahat\main.py:138]     ETL completed successfully.
+2025-06-16:07:48:31,434 INFO     [D:\DataHat\datahat\main.py:140]     ETL Ended at time:2025-06-16 07:48:31.434824
+2025-06-16:07:48:31,434 INFO     [D:\DataHat\datahat\main.py:141]     Time taken to finish the process of ETL:0:00:17.865666
+2025-06-16:08:08:34,727 INFO     [D:\DataHat\main.py:136]     ETL Started at time:2025-06-16 08:08:34.727087
+2025-06-16:08:08:34,727 INFO     [D:\DataHat\urlDownload.py:6]     Downloading file from https://assets.upstox.com/market-quote/instruments/exchange/NSE.csv.gz
+2025-06-16:08:08:35,49 INFO     [D:\DataHat\urlDownload.py:6]     Downloading file from https://images.dhan.co/api-data/api-scrip-master.csv
+2025-06-16:08:08:37,253 INFO     [D:\DataHat\transformations.py:4]     Filtering DataFrame for exchange: NSE_EQ and instrument type: EQUITY
+2025-06-16:08:08:37,253 INFO     [D:\DataHat\transformations.py:4]     Filtering DataFrame for exchange: NSE and instrument type: EQUITY
+2025-06-16:08:08:37,292 INFO     [D:\DataHat\main.py:58]     Size of Upstox:8110
+2025-06-16:08:08:37,292 INFO     [D:\DataHat\main.py:59]     Size of Dhan:8110
+2025-06-16:08:08:37,292 INFO     [D:\DataHat\main.py:82]     sqllite_connection_url:D:\DataHat\data\market_data.db
+2025-06-16:08:08:37,292 INFO     [D:\DataHat\mongo_operations.py:17]     Upserting DataFrame into MongoDB collection 'upstox_nse' in database 'market_data' using key 'instrument_key'
+2025-06-16:08:08:37,309 INFO     [D:\DataHat\mongo_operations.py:39]     Collection 'upstox_nse' already exists. Proceeding with upsert operation.
+2025-06-16:08:08:37,339 INFO     [D:\DataHat\mongo_operations.py:47]     DataFrame contains 8110 rows and 12 columns.
+2025-06-16:08:08:37,339 INFO     [D:\DataHat\mongo_operations.py:57]     Attempting to store/upsert 8110  data entries...
+2025-06-16:08:08:49,909 INFO     [D:\DataHat\mongo_operations.py:70]     Upserted 0 new documents and modified 0 existing documents.
+2025-06-16:08:08:49,912 INFO     [D:\DataHat\mongo_operations.py:75]     Upsert operation completed successfully for collection 'upstox_nse' in database 'market_data'.
+2025-06-16:08:08:49,916 INFO     [D:\DataHat\main.py:92]     MongoDB upsert completed !!! :)
+2025-06-16:08:08:49,918 INFO     [D:\DataHat\sqlite_operations.py:35]     Upserting DataFrame into SQLite table 'dhan_nse' in database 'market_data.db' using key 'SEM_SMST_SECURITY_ID'
+2025-06-16:08:08:49,918 INFO     [D:\DataHat\sqlite_operations.py:68]     Table 'dhan_nse' already exists. Proceeding with upsert operation.
+2025-06-16:08:08:49,919 INFO     [D:\DataHat\sqlite_operations.py:74]     Attempting to store/upsert 8110 data entries...
+2025-06-16:08:08:50,398 INFO     [D:\DataHat\sqlite_operations.py:91]     SQLite batch upsert successful: 8110 rows affected.
+2025-06-16:08:08:50,398 INFO     [D:\DataHat\main.py:102]     Sqlite upsert completed !!! :)
+2025-06-16:08:08:50,398 INFO     [D:\DataHat\transformations.py:32]     Merging DataFrames on column: tradingsymbol
+2025-06-16:08:08:50,398 INFO     [D:\DataHat\transformations.py:37]     Removing the duplicates in tradingsymbol
+2025-06-16:08:08:50,398 INFO     [D:\DataHat\transformations.py:39]     Removing the duplicates 11 in tradingsymbol first dataframe
+2025-06-16:08:08:50,398 INFO     [D:\DataHat\transformations.py:41]     Removing the duplicates11 in tradingsymbol second dataframe
+2025-06-16:08:08:50,467 INFO     [D:\DataHat\main.py:124]     Common Stocks: 8099
+2025-06-16:08:08:50,467 INFO     [D:\DataHat\main.py:125]     Upstox Stocks Only: 0
+2025-06-16:08:08:50,468 INFO     [D:\DataHat\main.py:126]     Dhan Stocks: 0
+2025-06-16:08:08:50,487 INFO     [D:\DataHat\main.py:138]     ETL completed successfully.
+2025-06-16:08:08:50,487 INFO     [D:\DataHat\main.py:140]     ETL Ended at time:2025-06-16 08:08:50.487168
+2025-06-16:08:08:50,487 INFO     [D:\DataHat\main.py:141]     Time taken to finish the process of ETL:0:00:15.760081
